@@ -30,7 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.cpf = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -44,6 +44,7 @@
             this.button1.TabIndex = 28;
             this.button1.Text = "Excluir";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -52,16 +53,17 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(551, 30);
             this.textBox1.TabIndex = 27;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // label2
+            // cpf
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 15F);
-            this.label2.Location = new System.Drawing.Point(77, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 23);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Código:";
+            this.cpf.AutoSize = true;
+            this.cpf.Font = new System.Drawing.Font("Arial", 15F);
+            this.cpf.Location = new System.Drawing.Point(77, 125);
+            this.cpf.Name = "cpf";
+            this.cpf.Size = new System.Drawing.Size(55, 23);
+            this.cpf.TabIndex = 26;
+            this.cpf.Text = "CPF:";
             // 
             // label1
             // 
@@ -92,10 +94,11 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cpf);
             this.Controls.Add(this.label1);
             this.Name = "Excluir";
             this.Text = "Excluir";
+            this.Load += new System.EventHandler(this.Excluir_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,7 +108,7 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label cpf;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
     }
